@@ -1,31 +1,33 @@
-# Shenzhen Quant Firm Revenue-per-Head Benchmark V0.2
+# Shenzhen Quant Firm Economic Density Benchmark V0.2
 
 **Timestamp:** 2026-09-28
 
-## Core metric
+## Benchmark Formula
 
 ```text
 Normalized Revenue / Head
-= AUM × 2% normalized monetization rate ÷ headcount
+= AUM × 2% normalized gross monetization rate ÷ headcount
 ```
 
-This is a standardized benchmark, not reported accounting revenue.
+This is a normalized cross-firm benchmark, **not reported company revenue**.
 
-| Rank | Firm | AUM | Headcount | AUM / Head | 2% Normalized Revenue / Head |
+## Current Ranking
+
+| Rank | Firm | AUM working range | Headcount | AUM / Head | 2% normalized revenue / head |
 |---:|---|---:|---:|---:|---:|
-| 1 | JHL / 进化论 | 400–500亿 | 37 | 10.8–13.5亿 | 2160–2700万 |
-| 2 | 知行通达 | 200亿+ | 35 | 5.71亿+ | 1140万+ |
-| 3 | 世纪前沿 | 600亿+ | 100+ | ~6亿级 | ~1200万级 |
-| 4 | 九坤 Ubiquant | 800亿 | 178 | ~4.49亿 | ~899万 |
-| 5 | HopeSeek / 宏锡* | 100–150亿 | ~25 | 4–6亿 | 800–1200万 |
-| 6 | 千惠 | 100–150亿 | ~47 | 2.13–3.19亿 | 426–638万 |
-| 7 | 茂源 | 400–500亿 | ~160 | 2.50–3.13亿 | 500–625万 |
-| 8 | 大道 | 100亿+ | ~45 | 2.22亿+ | 444万+ |
-| 9 | 大岩 | 100亿+ | 40+ | ~2.5亿+ | ~500万+ |
-| 10 | 衍盛 | 50–100亿 | ~32 | 1.56–3.13亿 | 313–625万 |
-| 11 | 久期量和 | 20–50亿 | ~35 | 0.57–1.43亿 | 114–286万 |
+| 1 | JHL / 进化论 | 400–500bn RMB | 37 | 1.08–1.35bn RMB | 21.6–27.0m RMB |
+| 2 | 知行通达 | 200bn+ RMB | 35 | 571m+ RMB | 11.4m+ RMB |
+| 3 | 世纪前沿 | 600bn+ RMB | 100+ | ~600m RMB order | ~12m RMB order |
+| 4 | 九坤 / Ubiquant | 800bn RMB | 178 | ~449m RMB | ~8.99m RMB |
+| 5 | HopeSeek / 宏锡* | 100–150bn RMB | ~25 | 400–600m RMB | 8–12m RMB |
+| 6 | 千惠 | 100–150bn RMB | ~47 | 213–319m RMB | 4.26–6.38m RMB |
+| 7 | 茂源 | 400–500bn RMB | ~160 | 250–313m RMB | 5.0–6.25m RMB |
+| 8 | 大道 | 100bn+ RMB | ~45 | 222m+ RMB | 4.44m+ RMB |
+| 9 | 大岩 | 100bn+ RMB | 40+ | ~250m+ RMB | ~5m+ RMB |
+| 10 | 衍盛 | 50–100bn RMB | ~32 | 156–313m RMB | 3.13–6.25m RMB |
+| 11 | 久期量和 | 20–50bn RMB | ~35 | 57–143m RMB | 1.14–2.86m RMB |
 
-*HopeSeek is Zhongshan-headquartered and retained as GBA benchmark.
+*HopeSeek is Zhongshan-headquartered; kept for Greater Bay Area comparison.
 
 ## GOD Notes
 
@@ -33,44 +35,47 @@ This is a standardized benchmark, not reported accounting revenue.
 
 ```text
 Economic Density
-= Monetizable Capital / Organizational Complexity
+= monetizable capital / organizational complexity
 ```
 
-AUM alone is not enough. A better organizational benchmark is how much monetizable capital a firm can support per employee while preserving research, engineering, trading and risk quality.
+AUM alone is insufficient. A more useful organizational benchmark combines:
+- capital scale,
+- headcount,
+- monetization rate,
+- research / engineering leverage,
+- operating complexity.
 
-### Two institution archetypes
+### Two winning architectures
 
 ```text
 Heavy Platform
-= 茂源 / 九坤 / 世纪前沿
-= larger team
-+ infra
-+ engineering
-+ specialization
-+ institutional scale
+茂源 / 九坤 / 世纪前沿
+→ larger team
+→ stronger specialization
+→ infrastructure / data / engineering leverage
 ```
 
 ```text
 Compact Research Institution
-= 进化论 / 知行通达
-= smaller team
-+ high AUM/head
-+ high research density
-+ high decision density
+进化论 / 知行通达
+→ smaller team
+→ higher AUM/head
+→ high research and decision density
 ```
 
-### Do not confuse revenue/head with salary/head
+### Revenue/head is not compensation/head
 
 ```text
-Revenue / Head
-→ Fixed Compensation
-→ Compute / Data / Execution
-→ Operating Cost
-→ Bonus Pool
-→ Retained Profit
+Revenue
+→ fixed compensation
+→ compute / data / trading / operations
+→ bonus pool
+→ retained profit
 ```
 
-## Next DD queue
+Never directly convert revenue/head into salary/head.
+
+## Priority DD Queue
 
 1. 诚奇 — exact headcount
 2. 超量子 — exact headcount
@@ -80,20 +85,3 @@ Revenue / Head
 6. 和美 — AUM + headcount
 7. 康曼德 — AUM + headcount
 8. 泰润海吉 — AUM + headcount
-
-## Reusable schema
-
-```text
-firm
-snapshot_date
-AUM_low
-AUM_high
-headcount
-AUM_per_head
-normalized_rate
-normalized_revenue_per_head
-firm_specific_revenue_low
-firm_specific_revenue_high
-source_confidence
-notes
-```
